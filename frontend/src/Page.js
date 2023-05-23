@@ -13,6 +13,8 @@ import EditableText from './EditableText';
 import FormattedText from './FormattedText';
 import Type, { TypeBadge } from './Type';
 import NavbarCollection from './navbarCollection';
+import DisplayRelatedCollections from './components/DisplayRelatedCollections/DisplayRelatedCollections';
+import { isPhoneSizedWindow } from './utils';
 
 function Page({backend}) {
 
@@ -143,7 +145,9 @@ function Page({backend}) {
         />
       </Row>
       <div className="navbar-collec">
-        {(trail.links && position) != undefined &&
+        { isPhoneSizedWindow() && <DisplayRelatedCollections relatedDocumentsMetadata={scholiaMetadata}
+          currentCollectionId={collectionId} />}
+        {trail._id === collectionId && trail.links && position != undefined &&
           <NavbarCollection
             position={position + 1}
             total={trail.links.length}
