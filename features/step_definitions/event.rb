@@ -26,3 +26,7 @@ Quand("j'essaie de remplacer le contenu de la glose par :") do |metadata|
   find('textarea').fill_in with: metadata
   leave_textarea
 end
+
+Quand('je navigue vers le parcours {string}') do |title|
+  click_on_icon_next_to('focus', title)
+end

@@ -15,6 +15,14 @@ Soit('{string} une des gloses') do |title|
   expect(find('.gloses')).to have_content title
 end
 
+Soit('{string} le parcours actuel') do |title|
+  expect(find('.navBar-collection')).to have_content title
+end
+
+Soit('{string} le parcours dans lequel est présent notre document principal') do |title|
+  expect(find('.relatedCollectionsDisplayer')) to have_content title
+end
+
 Soit('une session active avec mon compte') do
   sign_in('alice', 'whiterabbit')
 end
