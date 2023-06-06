@@ -15,7 +15,8 @@ Soit je suis sur téléphone
 Et "Parcours : Visite de l'Eglise St-Jean-au-Marché, Troyes" le document principal
 Et je navigue vers le document suivant
 Et je navigue vers le document suivant
-Et je rentre dans la collection "Parcours : Vitrail Vie de Jean le Baptiste en détail, Eglise St-Jean-Au-Marché, Troyes"
+Et "Photographie : vitrail, baie 20, Eglise St-Jean-au-Marché, Troyes, Vie de Jean le Baptiste" le document actuel dans la collection
+Et je vais vers le parcours "Parcours : Vitrail Vie de Jean le Baptiste en détail, Eglise St-Jean-Au-Marché, Troyes"
 Quand je clique sur le bouton retour
 Alors "Photographie : vitrail, baie 20, Eglise St-Jean-au-Marché, Troyes, Vie de Jean le Baptiste" est le document affiché à l'écran
 Et "Parcours : Visite de l'Eglise St-Jean-au-Marché, Troyes" est la collection actuelle
