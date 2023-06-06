@@ -31,10 +31,6 @@ def click_on_text(type)
   find(".editable.#{type}").click
 end
 
-def have_image(alternative_text)
-  have_xpath(".//img[@alt='#{alternative_text}']")
-end
-
 def sign_in(username, password)
   fill_in placeholder: "Username", with: username
   fill_in placeholder: 'Password', with: password
@@ -56,4 +52,12 @@ end
 
 def go_on_document_inside_collection(document, collection)
   visit "/collection/#{collection}/document/#{document}"
+end
+
+def have_button(class_name)
+  have_xpath(".//button[@class='{class_name}']")
+end
+
+def have_image(alternative_text)
+  have_xpath(".//img[@alt='#{alternative_text}']")
 end

@@ -80,3 +80,7 @@ end
 Alors("{string} est la collection actuelle") do |title|
   expect(find('.current-collection')).to have_content title
 end
+
+Alors("le bouton retour n'apparaît pas à l'écran") do
+  expect(page).not_to have_button('fab-return')
+end

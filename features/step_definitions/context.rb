@@ -15,7 +15,6 @@ Soit('{string} une des gloses') do |title|
   expect(find('.gloses')).to have_content title
 end
 
-<<<<<<< HEAD
 Soit('je vois les sources') do
   expect(find('.sources'))
 end
@@ -38,14 +37,14 @@ end
 
 Soit('je suis sur ordinateur') do
   resize_window(1080, 1920)
-=======
+end
+
 Soit('{string} le parcours actuel') do |title|
   expect(find('.navBar-collection')).to have_content title
 end
 
 Soit('{string} le parcours dans lequel est présent notre document principal') do |title|
-  expect(find('.relatedCollectionsDisplayer')) to have_content title
->>>>>>> f6aebc6eab9ac3acb2fb719192248be7b3d614b9
+  expect(find('.relatedCollectionsDisplayer')).to have_content title
 end
 
 Soit('une session active avec mon compte') do
@@ -102,3 +101,8 @@ end
 Soit('{string} autre collection dans laquelle le document principal est contenu') do |text|
   expect(find('.related-collections-displayer')).to have_content text
 end
+
+Soit('je vais vers le parcours {string}') do |title|
+  click_on_icon_next_to('focus', title)
+end
+
