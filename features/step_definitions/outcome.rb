@@ -76,3 +76,7 @@ end
 Alors("{string} est le document affiché à l'écran") do |text|
   expect(find('.runningHead')).to have_content text
 end
+
+Alors("{string} est la collection actuelle") do |title|
+  expect(find('.current-collection')).to have_content title
+end
