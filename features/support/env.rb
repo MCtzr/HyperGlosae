@@ -53,3 +53,7 @@ end
 def resize_window(width, heigth)
   page.current_window.resize_to(width, heigth)
 end
+
+def go_on_document_inside_collection(document, collection)
+  visit "/collection/#{collection}/document/#{document}"
+end
