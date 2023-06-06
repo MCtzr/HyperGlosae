@@ -15,6 +15,10 @@ Alors('{string} est la glose ouverte') do |title|
   expect(find('.runningHead .scholium')).to have_content title
 end
 
+Alors('{string} est le parcours actuel') do |title|
+  expect(find('.navBar-collection')).to have_content title
+end
+
 Alors('je peux lire {string}') do |text|
   expect(page).to have_content text
 end

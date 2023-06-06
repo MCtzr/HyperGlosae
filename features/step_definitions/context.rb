@@ -15,6 +15,7 @@ Soit('{string} une des gloses') do |title|
   expect(find('.gloses')).to have_content title
 end
 
+<<<<<<< HEAD
 Soit('je vois les sources') do
   expect(find('.sources'))
 end
@@ -37,6 +38,14 @@ end
 
 Soit('je suis sur ordinateur') do
   resize_window(1080, 1920)
+=======
+Soit('{string} le parcours actuel') do |title|
+  expect(find('.navBar-collection')).to have_content title
+end
+
+Soit('{string} le parcours dans lequel est présent notre document principal') do |title|
+  expect(find('.relatedCollectionsDisplayer')) to have_content title
+>>>>>>> f6aebc6eab9ac3acb2fb719192248be7b3d614b9
 end
 
 Soit('une session active avec mon compte') do

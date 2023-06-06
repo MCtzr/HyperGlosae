@@ -27,10 +27,15 @@ Quand("j'essaie de remplacer le contenu de la glose par :") do |markdown|
   leave_textarea
 end
 
+<<<<<<< HEAD
 Quand('je crée une collection à partir de ce document') do
   click_on_icon('create-collection')
 end
 
 Quand("je navigue vers le document suivant") do
   click_on('->')
+=======
+Quand('je navigue vers le parcours {string}') do |title|
+  click_on_icon_next_to('focus', title)
+>>>>>>> f6aebc6eab9ac3acb2fb719192248be7b3d614b9
 end
